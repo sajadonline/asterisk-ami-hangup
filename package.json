@@ -1,0 +1,23 @@
+{
+  "name": "asterisk-ami-hangup",
+  "version": "1.0.0",
+  "description": "detct hangup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajadonline/asterisk-ami-hangup.git"
+  },
+  "author": "sajadmazaheri.ir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajadonline/asterisk-ami-hangup/issues"
+  },
+  "homepage": "https://github.com/sajadonline/asterisk-ami-hangup#readme",
+  "dependencies": {
+    "asterisk-ami-client": "^1.1.5",
+    "request": "^2.88.2"
+  }
+}
