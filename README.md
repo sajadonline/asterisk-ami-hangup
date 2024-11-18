@@ -1,20 +1,43 @@
-# asterisk-ami-hangup
-detect hangup and send sms for id caller
+# Asterisk SMS Notification Service
 
-# install
-``` bash
-git clone git@github.com:sajadonline/asterisk-ami-hangup.git
-cd asterisk-ami-hangup
+Automatically sends SMS notifications to missed calls using Asterisk AMI.
+
+## Features
+- Auto SMS for missed calls
+- Environment-based configuration
+- Docker support
+- Error logging
+- Rate limiting
+- Phone number validation
+
+## Setup
+
+### Environment Variables
+Create `.env`:
+```
+SMS_USERNAME=your_username
+SMS_PASSWORD=your_password
+ASTERISK_IP=your_ip
+ASTERISK_USER=your_user
+ASTERISK_PASS=your_pass
+FROM_NUMBER=3000505
+```
+
+### Local Installation
+```bash
 npm install
+npm start
 ```
-# sms configuration
-visit https://sms.ariaservice.net and register
-modify configuration sms access variable in index.js
 
-# ami config and access
-modify /etc/asterisk/manager.conf and add ami user
-
-# run
-``` bash
-node index.js
+### Docker
+```bash
+docker build -t asterisk-sms .
+docker run --env-file .env asterisk-sms
 ```
+
+## Logs
+- `error.log`: Error messages
+- `combined.log`: All logs
+
+## License
+MIT
